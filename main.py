@@ -250,10 +250,6 @@ def do_run():
 
         gt = torch.ones_like(x)
         loss_fn = nn.MSELoss()
-        # # # Do some computations.
-        # v = x + 2
-        # y = v ** 2
-        # # # Compute loss.
         loss = loss_fn(x, gt)
 
         return -torch.autograd.grad(loss, x)[0]
